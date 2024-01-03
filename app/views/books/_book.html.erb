@@ -1,0 +1,56 @@
+<%# main container %>
+<div class="width-large flex-row center-flex">
+  <%#   width %>
+  <div class="width-md-1 flex-col flex-gap">
+    <%# header %>
+    <section class="width-large flex-row center-flex-y flex-space-between" >
+      <h5> <%= book.title %> </h5>
+      <%# <button class="btn btn-success"> Buy This Book </button> %>
+      <% if book.user_id != current_user.id %>
+        <%= turbo_frame_tag "btn-change" do %>
+          <%= link_to "Buy this book", buy_book_path(book), class: 'btn btn-success' %>
+        <% end %>
+      <% else %>
+        <span class="badge text-bg-danger">This Your Book</span>
+      <% end %>
+    </section>
+    <%# body %>
+    <div class="flex-row flex-gap book-description-row">
+      <div class="">
+        <%# image %>
+        <% if book.image.attached? %>
+          <% if book.image.image? %>
+            <%= image_tag book.image, class: 'image-size' %>
+          <% end %>
+        <% else %>
+          <img class="image-size " src="https://images.template.net/174732/free-story-book-cover-template-edit-online.jpg" alt="">
+        <% end %>
+      </div>
+      <section class="flex-col pad ">
+        <%# description %>
+        <span> <%= book.price %> </span>
+        <span> <%= book.year.year %> - <%= book.genre %> </span>
+        <span> <%= book.author %> </span>
+        <p> <%= book.description %> </p>
+      </div>
+      <%# responsive  %>
+      <div class="flex-col book-description-col flex-gap center-flex-y">
+        <div class="">
+          <%# image %>
+          <% if book.image.attached? %>
+            <% if book.image.image? %>
+              <%= image_tag book.image, class: 'image-size' %>
+            <% end %>
+          <% else %>
+            <img class="image-size " src="https://images.template.net/174732/free-story-book-cover-template-edit-online.jpg" alt="">
+          <% end %>
+        </div>
+        <section class="flex-col width-large pad align-flex-start">
+          <%# description %>
+          <span> <%= book.price %> </span>
+          <span> <%= book.year.year %> - <%= book.genre %> </span>
+          <span> <%= book.author %> </span>
+          <p> <%= book.description %> </p>
+        </div>
+      </div>
+    </div>

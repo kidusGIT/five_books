@@ -1,0 +1,10 @@
+<div class="pad width-large flex-col flex-gap">
+  <div> <%= link_to 'Sold Books', sold_path %> </div>
+  <%= turbo_frame_tag 'sold-books' do %>
+    <div class="width-large flex-col flex-gap">
+      <% @carts.each do |cart| %>
+        <%= render 'partials/card', book: cart.book %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

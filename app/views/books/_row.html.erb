@@ -1,0 +1,19 @@
+<tr>
+  <th scope="row">1</th>
+  <td><%= book.title %></td>
+  <td><%= book.author %></td>
+  <td><%= book.genre %></td>
+  <td><%= book.year %></td>
+  <td><%= book.price %></td>
+  <td>
+    <%= link_to book_path(book), class: 'btn btn-sm btn-info' do %>
+      <i class="bi bi-eye"></i> Show
+    <% end %>
+    <%= link_to edit_book_path(book), class: 'btn btn-sm btn-primary' do %>
+      <i class="bi bi-pencil-fill"></i>  Edit
+    <% end %>
+    <%= link_to book_path(book),  data: { "turbo-method": :delete }, class: 'btn btn-sm btn-danger' do %>
+      <i class="bi bi-trash-fill"></i>  Delete
+    <% end %>
+  </td>
+</tr>

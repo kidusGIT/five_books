@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+:root {
+  --border-color: #707070;
+  --secondary-bg-color: #f5f5f5;
+  --bg-color: #263028;
+  --font-color: #fff;
+  --secondary-font-color: #0000;
+  --hover-color: #575b5b;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  display: none;
+}
+
+::-webkit-scrollbar:hover {
+  display: block;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.border {
+  border: 1px solid var(--border-color);
+}
+
+.font-color {
+  color: var(--font-color);
+}
+
+.secondary-font-color {
+  color: var(--secondary-font-color);
+}
+
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+}
+
+.test-color {
+  background-color: aqua;
+}
+.test-color-1 {
+  background-color: blue;
+}
+.test-color-2 {
+  background-color: green;
+}
+
+.secondary-bg-color {
+  background-color: var(--secondary-bg-color);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-gap {
+  gap: 10px;
+}
+
+.center-flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.center-flex-y {
+  align-items: center;
+}
+
+.center-flex-x {
+  justify-content: center;
+}
+
+/* PADDING AND GAPS */
+.pad {
+  padding: 10px;
+}
+
+.gap-lg {
+  gap: 25px;
+}
+
+.pad-no {
+  padding: 0px;
+}
+
+/* TYPES WIDTH  */
+.width-large {
+  width: 100%;
+}
+
+.width-md {
+  width: 50%;
+}
+
+.width-md-1 {
+  width: 90%;
+}
+
+.width-small {
+  width: 60%;
+}
+
+.width-md-2 {
+  width: 80%;
+}
+
+.pad-0 {
+  padding: 0px;
+}
+
+.height-body {
+  min-height: 100vh;
+}
+
+.height-main {
+  flex: 1;
+}
+
+footer {
+  background-color: var(--bg-color);
+  height: 60px;
+  width: 100vw;
+  margin-top: auto;
+}
+
+.btn-width {
+  width: 70px;
+}
+
+.pad-b-3 {
+  padding-bottom: 20px;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.align-flex-start {
+  align-items: flex-start;
+}
+
+.image-size {
+  width: 250px;
+  height: 400px;
+  border-radius: 7px;
+}
+
+.image-size-small {
+  width: 200px;
+  height: 300px;
+  border-radius: 7px;
+}
+
+.shadow {
+  box-shadow: -10px 10px 10px rgb(158, 158, 158);
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.border-radius {
+  border-radius: 7px;
+}
+
+.x-scrollable {
+  overflow-x: scroll;
+}
+
+.y-scrollable {
+  overflow-y: scroll;
+}

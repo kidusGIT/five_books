@@ -1,0 +1,22 @@
+<div id="books" class="width-large pad-0 flex-col center-flex">
+  <div class="width-md-1 flex-col flex-gap">
+    <div class="flex-row flex-space-between center-flex-y">
+      <%# <div class="dropdown-center">
+        <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-filter"></i> Filter Books
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Tile</a></li>
+          <li><a class="dropdown-item" href="#">Author</a></li>
+          <li><a class="dropdown-item" href="#">Genre</a></li>
+        </ul>
+      </div> %>
+      <% if user_signed_in? %>
+        <div> <% current_user.email %> <% current_user.id %> </div>
+      <% end %>
+    </div>
+    <div class="width-large">
+      <div class="grid" data-helper-target="mainContainer"></div>
+    </div>
+  </div>
+</div>

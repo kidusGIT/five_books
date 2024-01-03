@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Book Title</th>
+      <th scope="col">Book Author</th>
+      <th scope="col">Book Genre</th>
+      <th scope="col">Book Year</th>
+      <th scope="col">Book Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% books.each do |book| %>
+      <%= render 'row', book: book  %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,61 @@
+<%= form_with(model: book, class: 'row g-3 needs-validation') do |form| %>
+  <% if book.errors.any? %>
+    <div class="alert alert-danger pad" role="alert">
+      <ul class="error-ul">
+        <% book.errors.each do |error| %>
+          <li> <%= error.full_message %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="col-md-12">
+    <% if is_edit %>
+      <% if book.image.attached? %>
+        <% if book.image.image? %>
+          <%= image_tag book.image, class: 'image-size' %>
+        <% end %>
+      <% else %>
+        <img class="image-size " src="https://images.template.net/174732/free-story-book-cover-template-edit-online.jpg" alt="">
+      <% end %>
+    <% end %>
+  </div>
+  <%# title %>
+  <div class="col-md-6">
+    <%= form.label :title, class:"form-label", for:"validationCustom01" %>
+    <%= form.text_field :title, class:"form-control", id:"validationCustom01", required:true, placeholder: 'Book Title' %>
+  </div>
+  <%# author %>
+  <div class="col-md-6">
+    <%= form.label :author,class:"form-label", for:"validationCustom01"  %>
+    <%= form.text_field :author, class:"form-control", id:"validationCustom01", required:true, placeholder: 'Book Author' %>
+  </div>
+  <%# description %>
+  <div class="col-md-12">
+    <%= form.label :description, class:"form-label", for:"validationCustom01" %>
+    <%= form.text_area :description, class:"form-control", id:"validationCustom01", placeholder: 'Book Description' %>
+  </div>
+  <%# genre %>
+  <div class="col-md-6">
+    <%= form.label :genre, class:"form-label", for:"validationCustom01" %>
+    <%= form.text_field :genre, class:"form-control", id:"validationCustom01", required:true, placeholder: 'Book Genre' %>
+  </div>
+  <%# year %>
+  <div class="col-md-6">
+    <%= form.label :year, class:"form-label", for:"validationCustom01"%>
+    <%= form.date_field :year, class:"form-control", id:"validationCustom01", required:true %>
+  </div>
+  <%# price %>
+  <div class="col-md-6">
+    <%= form.label :price, class:"form-label", for:"validationCustom01" %>
+    <%= form.text_field :price, type: :number, class:"form-control", id:"validationCustom01", required:true, placeholder: 'Book Price' %>
+  </div>
+  <%# image %>
+  <div class="col-md-6">
+    <%= form.label :image, class:"form-label", for:"validationCustom01" %>
+    <%= form.file_field :image, class:"form-control", id:"validationCustom01" %>
+  </div>
+  <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+  <div>
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

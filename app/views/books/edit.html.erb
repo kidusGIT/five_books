@@ -1,0 +1,11 @@
+<div class="width-large flex-row center-flex ">
+  <div class="width-md-1 center-flex flex-col flex-gap">
+    <div class="flex-row flex-space-between width-large">
+      <H4>Editing book</H4>
+      <%= link_to "Back to uploads", uploads_path, class: 'btn btn-secondary left-arrow' %>
+    </div>
+    <%= render "form", book: @book, is_edit: true %>
+    <div>
+    </div>
+  </div>
+</div>

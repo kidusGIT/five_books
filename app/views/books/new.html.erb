@@ -1,0 +1,11 @@
+<div class="width-large flex-row center-flex ">
+  <div class="width-md-1 center-flex flex-col flex-gap">
+    <div class="flex-row flex-space-between width-large">
+      <%= link_to "Back to books", books_path, class: 'btn btn-secondary left-arrow' %>
+      <H4>New book</H4>
+    </div>
+    <%= render "form", book: @book, is_edit: false %>
+    <div>
+    </div>
+  </div>
+</div>

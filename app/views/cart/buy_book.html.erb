@@ -1,0 +1,4 @@
+<%= turbo_frame_tag "btn-change" do %>
+  <span class="badge text-bg-success">Book is add in the cart</span>
+  <% link_to 'Remove this book', return_book_path(@book), class: 'btn btn-success', data: { "turbo-method": :delete } %>
+<% end %>

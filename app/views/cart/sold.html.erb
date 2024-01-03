@@ -1,0 +1,25 @@
+<div class="width-large flex-row center-flex">
+  <div class="width-md-1 flex-col flex-gap align-flex-start">
+    <div class="flex-row flex-space-between width-large">
+    </div>
+    <div class="width-large x-scrollable">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Title</th>
+            <th scope="col">Book Author</th>
+            <th scope="col">Buyer Full Name</th>
+            <th scope="col">Buyer Email</th>
+            <th scope="col">Buyer Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @carts.each do |cart| %>
+            <%= render 'row', book: cart.book, user: cart.user %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
